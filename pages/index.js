@@ -319,6 +319,12 @@ export default function Home() {
           <div className={styles.flex}>
             <button
               className={styles.button}
+              onClick={() => setSelectedTab("Create Proposal")}
+            >
+              Create Proposal
+            </button>
+            <button
+              className={styles.button}
               onClick={() => setSelectedTab("View Proposals")}
             >
               View Proposals
