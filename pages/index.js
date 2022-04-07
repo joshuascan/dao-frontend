@@ -299,7 +299,42 @@ export default function Home() {
 
   return (
     <div>
-      <div></div>
+      <Head>
+        <title>CryptoDevs DAO</title>
+        <meta name="description" content="CryptoDevs DAO" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <div className={styles.main}>
+        <div>
+          <h1 className={styles.title}>Welcome to Crypto Devs!</h1>
+          <div className={styles.description}>Welcome to the DAO!</div>
+          <div className={styles.description}>
+            Your CryptoDevs NFT Balance: {nftBalance}
+            <br />
+            Treasury Balance: {formatEther(treasuryBalance)} ETH
+            <br />
+            Total Number of Proposals: {numProposals}
+          </div>
+          <div className={styles.flex}>
+            <button
+              className={styles.button}
+              onClick={() => setSelectedTab("View Proposals")}
+            >
+              View Proposals
+            </button>
+          </div>
+          {renderTabs()}
+        </div>
+        <div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className={styles.image} src="/cryptodevs/0.svg" alt="" />
+        </div>
+      </div>
+
+      <footer className={styles.footer}>
+        Made with &#10084; by Crypto Devs
+      </footer>
     </div>
   );
 }
